@@ -1,0 +1,187 @@
+@import "mixins"
+
+$selectColor: #00af26
+
+body
+  padding: 0
+  margin: 0
+  color: #1f1f1f
+  background: #f1f1f1
+  line-height: 1.15
+  font-family: 'Istok Web', sans-sef
+  font-family: 'Noto Sans', sans-serif
+
+a
+  color: #1f1f1f
+  text-decoration: none
+
+ul
+  margin: 0
+  padding: 0
+
+.box
+  max-width: 1380px
+  margin: 0 auto
+  padding: 0 50px
+
+
+//####################//
+//### top-info-box ###//
+//####################//
+.top-info
+  border-bottom: 1px solid #ddd
+
+.top-info-box
+  display: flex
+  justify-content: flex-end
+  align-items: center
+  margin: 10px 0px
+
+  &__address
+    display: block
+    margin-right: 60px
+
+  &__social
+    display: flex
+
+  .social__btn
+    display: flex
+    width: 32px
+    height: 32px
+    margin: 0 5px
+    font-size: 20px
+    color: #ffffff
+    background: #727272
+    border-radius: 3px
+    transition: .25s ease-in-out
+    i
+      margin: auto
+    &:last-child
+      margin-right: 0
+
+  .sc-vk:hover
+    background: #4A76A8
+  .sc-fb:hover
+    background: #224590
+  .sc-insta:hover
+    background: #d15e00
+
+
+//####################//
+//##### header #######//
+//####################//
+
+.header
+  margin: 5px 0
+
+  &-box
+    display: flex
+    justify-content: space-between
+    align-items: center
+
+    &__logo
+      background: #f1f1f1
+
+    &__preview
+      font-size: 14px
+
+    &__tel,
+    &__email
+      position: relative
+      display: flex
+      flex-direction: column
+      font-weight: bold
+      font-family: 'Montserrat', sans-serif
+      transition: .25s ease-in-out
+
+      i
+        position: absolute
+        font-size: 18px
+        left: -25px
+        top: 0px
+        color: $selectColor
+
+      &-btn
+        font-family: 'Noto Sans', sans-serif
+        font-weight: normal
+        text-decoration: underline
+        text-decoration-color: #aaaaaa
+        padding: 3px 0
+        transition: .25s ease-in-out
+        &:hover
+          color: $selectColor
+
+    &__call:hover
+      transition: .25s ease-in-out
+      color: $selectColor
+
+    &__btnBkform
+      padding: 15px 20px
+      background: $selectColor
+      border-radius: 3px
+      color: #fff
+      border: 1px solid transparent
+      transition: .25s ease-in-out
+      &:hover
+        color: $selectColor
+        background: #fff
+        border: 1px solid $selectColor
+
+
+
+//####################//
+//### navigation #####//
+//####################//
+
+nav
+  position: relative
+  z-index: 10
+  margin-bottom: -30px
+  .nav-box
+    display: flex
+    justify-content: space-between
+    border-radius: 3px
+    margin: 10px 0px
+    padding: 0 30px
+    border: 1px solid $selectColor
+    background: $selectColor
+    margin-bottom: 0
+    z-index: 10
+
+    &__item
+      font-weight: bold
+      font-family: 'Montserrat', sans-serif
+      padding: 20px 0px
+      width: 100%
+      text-align: center
+      color: #fff
+      transition: .25s ease-in-out
+      &:hover
+        background: #ffffff
+        color: $selectColor
+
+
+//####################//
+//###   slider   #####//
+//####################//
+
+.slider
+  position: relative
+  width: 100%
+  margin-top:
+
+  .slick-arrow
+    position: absolute
+    z-index: 1
+  .slick-prev
+    left: 20px
+    top: 50%
+  .slick-next
+    right: 20px
+    top: 50%
+
+  &__item
+    background: url(../image/sborka-1.jpg) center/cover no-repeat
+
+    .box
+      height: 450px
