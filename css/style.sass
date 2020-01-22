@@ -168,11 +168,18 @@ nav
 .slider
   position: relative
   width: 100%
-  margin-top:
 
   .slick-arrow
     position: absolute
-    z-index: 1
+    z-index: 10
+    width: 44px
+    height: 44px
+    font-size: 44px
+    color: #f1f1f199
+    cursor: pointer
+    transition: .15s ease-in-out
+    &:hover
+      color: #f1f1f1
   .slick-prev
     left: 20px
     top: 50%
@@ -182,6 +189,7 @@ nav
 
   &__item
     background: url(../image/sborka-1.jpg) center/cover no-repeat
-
     .box
       height: 450px
+
+    
