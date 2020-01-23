@@ -11,8 +11,8 @@
   <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700|Noto+Sans&display=swap" rel="stylesheet">
   <!--JS-->
   <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
-<script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
-<script type="text/javascript" src="slick/slick.min.js"></script>
+  <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+  <script type="text/javascript" src="slick/slick.min.js"></script>
   <title>Helloworld</title>
 </head>
 <body>
@@ -32,36 +32,37 @@
     <div class="box">
       <div class="header-box">
         <a href="#" class="header-box__logo">
-          <img src="image/bed.png" height="105px">
+          <img src="image/bed2.png" height="105px">
         </a>
         <div class="header-box__preview">
           Создаём уют дома<br>Собственными руками
         </div>
         <div class="header-box__tel">
-          <i class="fas fa-phone-alt"></i>
-          <a href="#" class="header-box__call">+7 (3532) 25-13-03</a>
+          <a href="#" class="header-box__call"><i class="fas fa-phone-alt"></i>+7 (3532) 25-13-03</a>
           <a href="#" class="header-box__tel-btn">Заказать звонок</a>
         </div>
         <div class="header-box__email">
-          <i class="far fa-envelope"></i>
-          <a href="#" class="header-box__call">zakaz@sekretuyuta.ru</a>
+          
+          <a href="#" class="header-box__call"><i class="far fa-envelope"></i>zakaz@sekretuyuta.ru</a>
           <a href="#" class="header-box__email-btn">Написать нам</a>
         </div>
         <div class="header-box__btn-form">
-          <a href="#" class="header-box__btnBkform">Отправить заявку</a>
+          <a href="#" class="header-box__btnBkform btn">Отправить заявку</a>
         </div>
       </div>
     </div>
   </div>
   <nav>
     <div class="box">
+      <i class="fas fa-bars nav-box__burger-open"></i>
+      <i class="fas fa-times nav-box__burger-close"></i>
       <div class="nav-box">
-        <a href="#" class="nav-box__item">Компания</a>
-        <a href="#" class="nav-box__item">Галерея</a>
-        <a href="#" class="nav-box__item">Отзывы</a>
-        <a href="#" class="nav-box__item">Вопрос/Ответ</a>
-        <a href="#" class="nav-box__item">Акции</a>
-        <a href="#" class="nav-box__item">Контакты</a>
+        <a href="#" class="nav-box__item"><span>Компания</span></a>
+        <a href="#" class="nav-box__item"><span>Галерея</span></a>
+        <a href="#" class="nav-box__item"><span>Отзывы</span></a>
+        <a href="#" class="nav-box__item"><span>Вопрос/Ответ</span></a>
+        <a href="#" class="nav-box__item"><span>Акции</span></a>
+        <a href="#" class="nav-box__item"><span>Контакты</span></a>
       </div>
     </div>
   </nav>
@@ -69,31 +70,50 @@
     <div class="slider__item">
       <div class="box">
         <div class="slider__title">Продуманный до мелочей проект</div>
-        <div class="slider__text"></div>
-        <div class="slider__btn"></div>
+        <div class="slider__text">Создание и проектирование на основе уже готовых для вас решений</div>
+        <a href="#" class="slider__btn btn">Заказать</a href="#">
       </div>
     </div>
-    <div class="slider__item">
+    <div class="slider__item" style="background: url(image/sborka-2.jpg) center/cover no-repeat;">
       <div class="box">
-        <div class="slider__title">Продуманный до мелочей проект</div>
-        <div class="slider__text"></div>
-        <div class="slider__btn"></div>
+        <div class="slider__title">Сборка мебели под заказ</div>
+        <div class="slider__text">В любом количестве и любом объёме, каком только можете себе пожелать</div>
+        <a href="#" class="slider__btn btn">Перейти</a href="#">
       </div>
     </div>
-    <div class="slider__item">
+    <div class="slider__item" style="background: url(image/sborka-3.jpg) center/cover no-repeat;">
       <div class="box">
-        <div class="slider__title">Продуманный до мелочей проект</div>
-        <div class="slider__text"></div>
-        <div class="slider__btn"></div>
+        <div class="slider__title">Большой ассортимент</div>
+        <div class="slider__text">Мы располагаем мастерами в различных областях и готовы обсудить любой проект</div>
+        <a href="#" class="slider__btn btn">Обратиться</a>
       </div>
     </div>
   </div>
-
+  <div class="catalog">
+    <div class="box">
+      <div class="catalog-box">
+        
+      </div>
+    </div>
+  </div>
   <script type="text/javascript">
+
     $(document).ready(function(){
+      $('.nav-box__burger-open').click(function () {
+        $('.nav-box__item').css({display: "flex"});
+        $('.nav-box__burger-open').css({display: "none"});
+        $('.nav-box__burger-close').css({display: "block"});
+      });
+      $('.nav-box__burger-close').click(function () {
+        $('.nav-box__item').css({display: "none"});
+        $('.nav-box__burger-open').css({display: "block"});
+        $('.nav-box__burger-close').css({display: "none"});
+      });
+
       $('.slider').slick({
-        prevArrow: "<i class='far fa-arrow-alt-circle-left slick-arrow slick-prev'></i>",
-        nextArrow: "<i class='far fa-arrow-alt-circle-right slick-arrow slick-next'></i>"
+        prevArrow: "<i class='fas fa-chevron-circle-left slick-arrow slick-prev'></i>",
+        nextArrow: "<i class='fas fa-chevron-circle-right slick-arrow slick-next'></i>",
+        cssEase: 'ease-in-out'
       });
     });
   </script>
