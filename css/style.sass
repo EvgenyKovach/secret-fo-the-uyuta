@@ -5,7 +5,7 @@ $selectColor: #30bd66
 body
   padding: 0
   margin: 0
-  color: #1f1f1f
+  color: #2f2f32
   background: #f1f1f1
   line-height: 1.15
   font-family: 'Montserrat', sans-serif
@@ -15,7 +15,7 @@ body
     font-size: 14px
 
 a
-  color: #1f1f1f
+  color: #2f2f32
   text-decoration: none
 
 .btn
@@ -41,6 +41,11 @@ ul
   margin: 0
   padding: 0
 
+.title
+  font-size: 26px
+  font-family: "Montserrat", sans-serif
+  font-weight: bold
+
 .box
   max-width: 1380px
   margin: 0 auto
@@ -52,9 +57,10 @@ ul
   +bp(650px)
     padding: 0 15px
 
-//####################//
-//### top-info-box ###//
-//####################//
+//******************************************//
+//************ top-info-box ****************//
+//******************************************//
+
 .top-info
   border-bottom: 1px solid #ddd
 
@@ -94,9 +100,9 @@ ul
     background: #F27F2A
 
 
-//####################//
-//##### header #######//
-//####################//
+//******************************************//
+//*********   header   *********************//
+//******************************************//
 
 .header
   margin: 5px 0
@@ -121,6 +127,9 @@ ul
         width: auto
 
       img
+        padding: 15px 0
+        height: 85px
+
         +bp(1100px)
           margin-right: auto
           padding: 20px 0
@@ -163,8 +172,8 @@ ul
       i
         position: absolute
         font-size: 18px
-        left: -30px
-        top: 0px
+        left: -27px
+        top: 2px
         color: $selectColor
 
     &__preview
@@ -186,9 +195,9 @@ ul
 
 
 
-//####################//
-//### navigation #####//
-//####################//
+//*******************************************//
+//***********    navigation   ***************//
+//*******************************************//
 
 nav
   position: relative
@@ -202,7 +211,7 @@ nav
     border-radius: 2px
     margin: 10px 0px
     padding: 0 30px
-    border: 1px solid $selectColor
+    border: 2px solid $selectColor
     background: $selectColor
     margin-bottom: 0
     z-index: 10
@@ -217,7 +226,8 @@ nav
     &__burger-close
       position: absolute
       top: 5px
-      width: 92%
+      left: 0px
+      width: 100%
       display: none
       margin: auto
       color: #f1f1f1
@@ -257,9 +267,9 @@ nav
           margin-top: 40px
 
 
-//####################//
-//###   slider   #####//
-//####################//
+//*******************************************//
+//*************   slider   ******************//
+//*******************************************//
 
 .slider
   position: relative
@@ -292,6 +302,40 @@ nav
     top: 206px
     +bp(950px)
       top: 153px
+
+  .slider-dots-box
+    position: absolute
+    display: flex
+    justify-content: center
+    bottom: 20px
+    width: 100%
+    +bp(650px)
+      bottom: 5px
+    li
+      position: relative
+      margin: 0 7px
+      list-style: none
+      cursor: pointer
+      &::before
+        position: absolute
+        content: ""
+        width: 10px
+        height: 10px
+        background: #777777
+        border: 2px solid #ffffff
+        border-radius: 20%
+        opacity: 1
+        cursor: pointer
+        +bp(450px)
+          width: 7px
+          height: 7px
+      button
+        opacity: 0
+        cursor: pointer
+
+    .slick-active
+      &::before
+        background: $selectColor
   
   //настройка контента слайдера
 
@@ -321,11 +365,11 @@ nav
     padding: 10px 5px
     font-family: 'Montserrat', sans-serif
     font-weight: bold
-    font-size: 22px
+    font-size: 28px
     z-index: 3
 
   &__text
-    font-size: 16px
+    font-size: 20px
     font-family: 'Noto Sans', sans-serif
     z-index: 3
 
@@ -336,4 +380,14 @@ nav
     &:hover
       
 
-    
+//******************************************//
+//************   catalog  *******************//
+//******************************************//
+
+.catalog
+  margin-top: 40px
+  &__title-one
+    color: #2f2f32
+  &__title-second
+    font-size: 20px
+    color: #4f4f4f

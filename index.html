@@ -19,7 +19,7 @@
   <div class="top-info">
     <div class="box">
       <div class="top-info-box">
-        <a href="#" class="top-info-box__address">г. Оренбург, ул. Чкалова 47</a>
+        <a href="#" class="top-info-box__address">г. Оренбург, пр.Победы 10</a>
         <div class="top-info-box__social">
           <a href="#" class="social__btn sc-vk"><i class="fab fa-vk"></i></a>
           <a href="#" class="social__btn sc-fb"><i class="fab fa-facebook-f"></i></a>
@@ -32,10 +32,10 @@
     <div class="box">
       <div class="header-box">
         <a href="#" class="header-box__logo">
-          <img src="image/bed2.png" height="105px">
+          <img src="image/bed5.png" height="105px">
         </a>
         <div class="header-box__preview">
-          Создаём уют дома<br>Собственными руками
+          Создаём уют дома<br>собственными руками
         </div>
         <div class="header-box__tel">
           <a href="#" class="header-box__call"><i class="fas fa-phone-alt"></i>+7 (3532) 25-13-03</a>
@@ -88,11 +88,24 @@
         <a href="#" class="slider__btn btn">Обратиться</a>
       </div>
     </div>
+    
   </div>
   <div class="catalog">
     <div class="box">
+      <div class="catalog__title-one title">Каталог мебели</div>
+      <div class="catalog__title-second title">То, что мы делаем лучше всех</div>
       <div class="catalog-box">
-        
+        <div class="catalog-box__item">
+          <div class="catalog-box__item-name"></div>
+        </div>
+        <div class="catalog-box__item"></div>
+        <div class="catalog-box__item"></div>
+        <div class="catalog-box__item"></div>
+        <div class="catalog-box__item"></div>
+        <div class="catalog-box__item"></div>
+        <div class="catalog-box__item"></div>
+        <div class="catalog-box__item"></div>
+        <div class="catalog-box__item"></div>
       </div>
     </div>
   </div>
@@ -113,7 +126,10 @@
       $('.slider').slick({
         prevArrow: "<i class='fas fa-chevron-circle-left slick-arrow slick-prev'></i>",
         nextArrow: "<i class='fas fa-chevron-circle-right slick-arrow slick-next'></i>",
-        cssEase: 'ease-in-out'
+        cssEase: 'ease-in-out',
+        dots: true,
+        pauseOnDotsHover: true,
+        dotsClass: "slider-dots-box"
       });
     });
   </script>

@@ -49,7 +49,7 @@
 body {
   padding: 0;
   margin: 0;
-  color: #1f1f1f;
+  color: #2f2f32;
   background: #f1f1f1;
   line-height: 1.15;
   font-family: 'Montserrat', sans-serif;
@@ -64,7 +64,7 @@ body {
 }
 
 a {
-  color: #1f1f1f;
+  color: #2f2f32;
   text-decoration: none;
 }
 
@@ -98,6 +98,12 @@ a {
 ul {
   margin: 0;
   padding: 0;
+}
+
+.title {
+  font-size: 26px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: bold;
 }
 
 .box {
@@ -244,6 +250,11 @@ ul {
   }
 }
 
+.header-box__logo img {
+  padding: 15px 0;
+  height: 85px;
+}
+
 @media (max-width: 1100px) {
   .header-box__logo img {
     margin-right: auto;
@@ -315,8 +326,8 @@ ul {
 .header-box__call i {
   position: absolute;
   font-size: 18px;
-  left: -30px;
-  top: 0px;
+  left: -27px;
+  top: 2px;
   color: #30bd66;
 }
 
@@ -372,7 +383,7 @@ nav .nav-box {
   border-radius: 2px;
   margin: 10px 0px;
   padding: 0 30px;
-  border: 1px solid #30bd66;
+  border: 2px solid #30bd66;
   background: #30bd66;
   margin-bottom: 0;
   z-index: 10;
@@ -396,7 +407,8 @@ nav .nav-box {
 nav .nav-box__burger-open, nav .nav-box__burger-close {
   position: absolute;
   top: 5px;
-  width: 92%;
+  left: 0px;
+  width: 100%;
   display: none;
   margin: auto;
   color: #f1f1f1;
@@ -507,6 +519,59 @@ nav .nav-box__item:hover {
   }
 }
 
+.slider .slider-dots-box {
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  bottom: 20px;
+  width: 100%;
+}
+
+@media (max-width: 650px) {
+  .slider .slider-dots-box {
+    bottom: 5px;
+  }
+}
+
+.slider .slider-dots-box li {
+  position: relative;
+  margin: 0 7px;
+  list-style: none;
+  cursor: pointer;
+}
+
+.slider .slider-dots-box li::before {
+  position: absolute;
+  content: "";
+  width: 10px;
+  height: 10px;
+  background: #777777;
+  border: 2px solid #ffffff;
+  border-radius: 20%;
+  opacity: 1;
+  cursor: pointer;
+}
+
+@media (max-width: 450px) {
+  .slider .slider-dots-box li::before {
+    width: 7px;
+    height: 7px;
+  }
+}
+
+.slider .slider-dots-box li button {
+  opacity: 0;
+  cursor: pointer;
+}
+
+.slider .slider-dots-box .slick-active::before {
+  background: #30bd66;
+}
+
 .slider__item {
   background: url(../image/sborka-1.jpg) center/cover no-repeat;
   position: relative;
@@ -551,12 +616,12 @@ nav .nav-box__item:hover {
   padding: 10px 5px;
   font-family: 'Montserrat', sans-serif;
   font-weight: bold;
-  font-size: 22px;
+  font-size: 28px;
   z-index: 3;
 }
 
 .slider__text {
-  font-size: 16px;
+  font-size: 20px;
   font-family: 'Noto Sans', sans-serif;
   z-index: 3;
 }
@@ -565,5 +630,18 @@ nav .nav-box__item:hover {
   padding: 15px 30px;
   margin: 15px 0;
   z-index: 3;
+}
+
+.catalog {
+  margin-top: 40px;
+}
+
+.catalog__title-one {
+  color: #2f2f32;
+}
+
+.catalog__title-second {
+  font-size: 20px;
+  color: #4f4f4f;
 }
 /*# sourceMappingURL=style.css.map */
