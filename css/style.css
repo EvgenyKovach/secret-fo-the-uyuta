@@ -637,11 +637,42 @@ nav .nav-box__item:hover {
 }
 
 .catalog__title-one {
+  font-size: 33px;
   color: #2f2f32;
 }
 
 .catalog__title-second {
+  margin-top: 5px;
   font-size: 20px;
   color: #4f4f4f;
+}
+
+.catalog .catalog-box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-top: 15px;
+}
+
+.catalog .catalog-box__item {
+  -ms-flex-preferred-size: 23%;
+      flex-basis: 23%;
+  height: 200px;
+  margin: 10px 1pxs;
+}
+
+.catalog .catalog-box__item-name {
+  padding: 5px 20px;
+  background-color: #00000066;
+  width: auto;
+  color: #f1f1f1;
+  font-family: "Montserrat", sans-serif;
+  font-weight: bold;
+  font-size: 24px;
 }
 /*# sourceMappingURL=style.css.map */
