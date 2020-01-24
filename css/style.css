@@ -46,6 +46,24 @@
   }
 }
 
+@-webkit-keyframes catalogItemHover {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 100%;
+  }
+}
+
+@keyframes catalogItemHover {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 100%;
+  }
+}
+
 body {
   padding: 0;
   margin: 0;
@@ -660,19 +678,86 @@ nav .nav-box__item:hover {
 }
 
 .catalog .catalog-box__item {
-  -ms-flex-preferred-size: 23%;
-      flex-basis: 23%;
-  height: 200px;
-  margin: 10px 1pxs;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+  width: 24%;
+  height: 175px;
+  margin: 10px 1px;
+}
+
+@media (max-width: 1200px) {
+  .catalog .catalog-box__item {
+    width: 32%;
+  }
+}
+
+@media (max-width: 900px) {
+  .catalog .catalog-box__item {
+    width: 48%;
+  }
+}
+
+@media (max-width: 550px) {
+  .catalog .catalog-box__item {
+    width: 99%;
+  }
 }
 
 .catalog .catalog-box__item-name {
   padding: 5px 20px;
-  background-color: #00000066;
-  width: auto;
+  background-color: #00000044;
+  width: 100%;
+  height: auto;
   color: #f1f1f1;
   font-family: "Montserrat", sans-serif;
   font-weight: bold;
-  font-size: 24px;
+  font-size: 22px;
+  z-index: 1;
+}
+
+.catalog .catalog-box__item-name::before {
+  top: 0;
+  left: 0;
+  position: absolute;
+  content: "";
+  height: 100%;
+  width: 0%;
+  background: #000000dd;
+  z-index: 1;
+}
+
+.catalog .catalog-box__item:hover .catalog-box__item-name::before {
+  -webkit-animation: catalogItemHover .45s linear;
+          animation: catalogItemHover .45s linear;
+  width: 100%;
+}
+
+.catalog .catalog-box__item:hover .catalog-box__go-catalog {
+  opacity: 1;
+}
+
+.catalog .catalog-box__go-catalog {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  opacity: 0;
+  -webkit-transition: .9s ease-in-out;
+  transition: .9s ease-in-out;
+  position: absolute;
+  margin: 0 auto;
+  margin-top: 70px;
+  width: 100%;
+  z-index: 2;
+}
+
+.catalog .catalog-box__go-catalog span {
+  color: #30bd66;
+  border: 2px solid #30bd66;
+  -webkit-box-shadow: 0 0 2px #30bd66;
+          box-shadow: 0 0 2px #30bd66;
+  padding: 10px 7px;
+  margin: auto;
 }
 /*# sourceMappingURL=style.css.map */
