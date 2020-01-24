@@ -656,8 +656,20 @@ nav .nav-box__item:hover {
 }
 
 .catalog__title-one {
+  position: relative;
+  margin-bottom: 15px;
   font-size: 33px;
   color: #2f2f32;
+  display: inline-block;
+}
+
+.catalog__title-one::before {
+  position: absolute;
+  content: "";
+  bottom: -5px;
+  width: 100%;
+  height: 4px;
+  background: #30bd66;
 }
 
 .catalog__title-second {
@@ -685,6 +697,7 @@ nav .nav-box__item:hover {
   position: relative;
   width: 24%;
   height: 175px;
+  border-radius: 5px;
   margin: 10px 1px;
 }
 
@@ -709,6 +722,7 @@ nav .nav-box__item:hover {
 .catalog .catalog-box__item-name {
   padding: 5px 20px;
   background-color: #00000044;
+  border-radius: 5px;
   width: 100%;
   height: auto;
   color: #f1f1f1;
@@ -726,6 +740,7 @@ nav .nav-box__item:hover {
   height: 100%;
   width: 0%;
   background: #05130add;
+  border-radius: 5px;
   z-index: 1;
 }
 
@@ -764,8 +779,23 @@ nav .nav-box__item:hover {
 
 .about-us {
   margin-top: 50px;
-  background: #7a8078;
+  background: #5d5d5d;
   color: #f1f1f1;
   padding: 40px 0;
+  font-family: 'Noto Sans', sans-serif;
+}
+
+.about-us__title {
+  position: relative;
+  display: inline-block;
+}
+
+.about-us__title::before {
+  position: absolute;
+  content: "";
+  bottom: -5px;
+  width: 100%;
+  height: 4px;
+  background: #30bd66;
 }
 /*# sourceMappingURL=style.css.map */
