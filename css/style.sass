@@ -11,6 +11,8 @@ body
   font-family: 'Montserrat', sans-serif
   font-family: 'Noto Sans', sans-serif
   font-size: 16px
+  +bp(1380px)
+    font-size: 15px
   +bp(550px)
     font-size: 14px
 
@@ -131,12 +133,13 @@ ul
       img
         padding: 15px 0
         height: 85px
-
+        +bp(1380px)
+          height: 75px
         +bp(1100px)
           margin-right: auto
           padding: 20px 0
         +bp(650px)
-          height: 75px
+          height: 70px
 
     &__preview
       font-size: 14px
@@ -150,6 +153,8 @@ ul
       font-size: 18px
       font-family: 'Montserrat', sans-serif
       transition: .25s ease-in-out
+      +bp(1380px)
+        font-size: 16px
       +bp(1100px)
         align-items: flex-end
         width: 100%
@@ -244,10 +249,11 @@ nav
         display: block
 
     &__item
-      font-weight: bold
-      font-family: 'Montserrat', sans-serif
       padding: 20px 0
       width: 100%
+      font-weight: bold
+      font-family: 'Montserrat', sans-serif
+      font-size: 16px
       text-align: center
       color: #fff
       transition: .25s ease-in-out
@@ -323,7 +329,7 @@ nav
         content: ""
         width: 10px
         height: 10px
-        background: #777777
+        background: #77777722
         border: 2px solid #ffffff
         border-radius: 20%
         opacity: 1
@@ -337,6 +343,7 @@ nav
 
     .slick-active
       &::before
+        border: 2px solid #ffffff
         background: $selectColor
   
   //настройка контента слайдера
@@ -483,6 +490,9 @@ nav
   padding: 40px 0
   font-family: 'Noto Sans', sans-serif
 
+  .about-us-box
+    display: flex
+
   &__title
     position: relative
     display: inline-block
@@ -493,6 +503,17 @@ nav
       width: 100%
       height: 4px
       background: $selectColor
+
+  &__text
+    padding: 20px 30px
+
+  &__img
+    display: flex
+    flex-basis: 40%
+    +bp(600px)
+      display: none
+    img
+      margin: auto
 
 
 //******************************************//
