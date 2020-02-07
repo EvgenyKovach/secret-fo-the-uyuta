@@ -67,12 +67,13 @@
 body {
   padding: 0;
   margin: 0;
-  color: #2f2f32;
+  color: #f1f1f1;
   background: #f1f1f1;
   line-height: 1.15;
   font-family: 'Montserrat', sans-serif;
   font-family: 'Noto Sans', sans-serif;
   font-size: 16px;
+  background: #21252B;
 }
 
 @media (max-width: 1380px) {
@@ -88,7 +89,7 @@ body {
 }
 
 a {
-  color: #2f2f32;
+  color: #f1f1f1;
   text-decoration: none;
 }
 
@@ -100,9 +101,9 @@ a {
   text-align: center;
   font-weight: bold;
   border-radius: 3px;
-  background: #30bd66;
+  background: #01A469;
   color: #fff;
-  border: 2px solid transparent;
+  border: 3px solid transparent;
   -webkit-transition: .25s ease-in-out;
   transition: .25s ease-in-out;
 }
@@ -114,9 +115,9 @@ a {
 }
 
 .btn:hover {
-  color: #30bd66;
+  color: #01A469;
   background: #fff;
-  border: 2px solid #30bd66;
+  border-bottom: 3px solid #01A469;
 }
 
 ul {
@@ -126,7 +127,6 @@ ul {
 
 .title {
   font-size: 26px;
-  margin-left: 15px;
   font-family: "Montserrat", sans-serif;
   font-weight: bold;
 }
@@ -156,6 +156,8 @@ ul {
 }
 
 .top-info {
+  background: url(../image/bg4.jpg) center/cover no-repeat;
+  background-attachment: fixed;
   border-bottom: 1px solid #ddd;
 }
 
@@ -169,7 +171,7 @@ ul {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin: 10px 0px;
+  padding: 10px 0px;
 }
 
 .top-info-box__address {
@@ -253,10 +255,6 @@ ul {
   }
 }
 
-.header-box__logo {
-  background: #f1f1f1;
-}
-
 @media (max-width: 1100px) {
   .header-box__logo {
     width: 50%;
@@ -277,7 +275,7 @@ ul {
 
 .header-box__logo img {
   padding: 15px 0;
-  height: 85px;
+  height: 125px;
 }
 
 @media (max-width: 1380px) {
@@ -347,7 +345,7 @@ ul {
 }
 
 .header-box__tel-btn:hover, .header-box__email-btn:hover {
-  color: #30bd66;
+  color: #01A469;
 }
 
 @media (max-width: 450px) {
@@ -365,7 +363,7 @@ ul {
   font-size: 18px;
   left: -27px;
   top: 2px;
-  color: #30bd66;
+  color: #01A469;
 }
 
 @media (max-width: 1250px) {
@@ -377,7 +375,7 @@ ul {
 .header-box__call:hover {
   -webkit-transition: .25s ease-in-out;
   transition: .25s ease-in-out;
-  color: #30bd66;
+  color: #01A469;
 }
 
 @media (max-width: 1100px) {
@@ -420,8 +418,8 @@ nav .nav-box {
   border-radius: 2px;
   margin: 10px 0px;
   padding: 0 30px;
-  border: 2px solid #30bd66;
-  background: #30bd66;
+  border: 2px solid #01A469;
+  background: #01A469;
   margin-bottom: 0;
   z-index: 10;
 }
@@ -436,8 +434,8 @@ nav .nav-box {
             flex-direction: column;
     min-height: 55px;
     padding: 0;
-    -webkit-box-shadow: 60px 0 0 #30bd66, -60px 0 0 #30bd66;
-            box-shadow: 60px 0 0 #30bd66, -60px 0 0 #30bd66;
+    -webkit-box-shadow: 60px 0 0 #01A469, -60px 0 0 #01A469;
+            box-shadow: 60px 0 0 #01A469, -60px 0 0 #01A469;
   }
 }
 
@@ -463,11 +461,11 @@ nav .nav-box__burger-open, nav .nav-box__burger-close {
 }
 
 nav .nav-box__item {
-  padding: 20px 0;
+  padding: 15px 0;
   width: 100%;
   font-weight: bold;
   font-family: 'Montserrat', sans-serif;
-  font-size: 16px;
+  font-size: 15px;
   text-align: center;
   color: #fff;
   -webkit-transition: .25s ease-in-out;
@@ -489,14 +487,16 @@ nav .nav-box__item {
 }
 
 nav .nav-box__item:hover {
-  background: #f1f1f1;
-  color: #30bd66;
+  background: #fff;
+  color: #01A469;
+  -webkit-box-shadow: 0px 2px 0 #fff, 0px -2px 0 #fff;
+          box-shadow: 0px 2px 0 #fff, 0px -2px 0 #fff;
 }
 
 @media (max-width: 950px) {
   nav .nav-box__item:hover {
-    -webkit-box-shadow: 60px 0 0 #f1f1f1, -60px 0 0 #f1f1f1;
-            box-shadow: 60px 0 0 #f1f1f1, -60px 0 0 #f1f1f1;
+    -webkit-box-shadow: 60px 0 0 #21252B, -60px 0 0 #21252B;
+            box-shadow: 60px 0 0 #21252B, -60px 0 0 #21252B;
   }
 }
 
@@ -585,12 +585,12 @@ nav .nav-box__item:hover {
 .slider .slider-dots-box li::before {
   position: absolute;
   content: "";
-  width: 10px;
-  height: 10px;
+  width: 25px;
+  height: 3px;
   background: #77777722;
-  border: 2px solid #ffffff;
-  border-radius: 20%;
-  opacity: 1;
+  border: 1px solid #ffffff99;
+  border-radius: 5%;
+  opacity: 0.68;
   cursor: pointer;
 }
 
@@ -607,8 +607,8 @@ nav .nav-box__item:hover {
 }
 
 .slider .slider-dots-box .slick-active::before {
-  border: 2px solid #ffffff;
-  background: #30bd66;
+  border: 1px solid #ffffff;
+  background: #01A469;
 }
 
 .slider__item {
@@ -679,7 +679,7 @@ nav .nav-box__item:hover {
   position: relative;
   margin-bottom: 15px;
   font-size: 33px;
-  color: #2f2f32;
+  color: #f1f1f1;
   display: inline-block;
 }
 
@@ -689,13 +689,13 @@ nav .nav-box__item:hover {
   bottom: -5px;
   width: 100%;
   height: 4px;
-  background: #30bd66;
+  background: #01A469;
 }
 
 .catalog__title-second {
   margin-top: 5px;
   font-size: 20px;
-  color: #4f4f4f;
+  color: #f4f4f4;
 }
 
 .catalog .catalog-box {
@@ -715,8 +715,8 @@ nav .nav-box__item:hover {
   display: -ms-flexbox;
   display: flex;
   position: relative;
-  width: 24%;
-  height: 175px;
+  width: 32%;
+  height: 200px;
   border-radius: 5px;
   margin: 10px 1px;
 }
@@ -741,7 +741,7 @@ nav .nav-box__item:hover {
 
 .catalog .catalog-box__item-name {
   padding: 10px 20px;
-  background-color: #00000044;
+  background-color: #00000077;
   border-radius: 5px;
   width: 100%;
   height: auto;
@@ -759,7 +759,7 @@ nav .nav-box__item:hover {
   content: "";
   height: 100%;
   width: 0%;
-  background: #171b18dd;
+  background: #000000dd;
   border-radius: 5px;
   z-index: 1;
 }
@@ -783,23 +783,24 @@ nav .nav-box__item:hover {
   transition: .9s ease-in-out;
   position: absolute;
   margin: 0 auto;
-  margin-top: 70px;
+  margin-top: 85px;
   width: 100%;
   z-index: 2;
 }
 
 .catalog .catalog-box__go-catalog span {
-  color: #30bd66;
-  border: 2px solid #30bd66;
-  -webkit-box-shadow: 0 0 2px #30bd66;
-          box-shadow: 0 0 2px #30bd66;
+  color: #01A469;
+  border: 2px solid #01A469;
+  -webkit-box-shadow: 0 0 2px #01A469;
+          box-shadow: 0 0 2px #01A469;
   padding: 10px 7px;
   margin: auto;
 }
 
 .about-us {
   margin-top: 50px;
-  background: #5d5d5d;
+  background: url(../image/bg4.jpg) center/cover no-repeat;
+  background-attachment: fixed;
   color: #f1f1f1;
   padding: 40px 0;
   font-family: 'Noto Sans', sans-serif;
@@ -822,7 +823,7 @@ nav .nav-box__item:hover {
   bottom: -5px;
   width: 100%;
   height: 4px;
-  background: #30bd66;
+  background: #01A469;
 }
 
 .about-us__text {

@@ -1,23 +1,24 @@
 @import "mixins", "animation"
 
-$selectColor: #30bd66
+$selectColor: #01A469
 
 body
   padding: 0
   margin: 0
-  color: #2f2f32 
+  color: #f1f1f1
   background: #f1f1f1
   line-height: 1.15
   font-family: 'Montserrat', sans-serif
   font-family: 'Noto Sans', sans-serif
   font-size: 16px
+  background: #21252B
   +bp(1380px)
     font-size: 15px
   +bp(550px)
     font-size: 14px
 
 a
-  color: #2f2f32
+  color: #f1f1f1
   text-decoration: none
 
 .btn
@@ -30,14 +31,14 @@ a
   border-radius: 3px
   background: $selectColor
   color: #fff
-  border: 2px solid transparent
+  border: 3px solid transparent
   transition: .25s ease-in-out
   +bp(450px)
     margin: auto
   &:hover
     color: $selectColor
     background: #fff
-    border: 2px solid $selectColor
+    border-bottom: 3px solid $selectColor
 
 ul
   margin: 0
@@ -45,7 +46,6 @@ ul
 
 .title
   font-size: 26px
-  margin-left: 15px
   font-family: "Montserrat", sans-serif
   font-weight: bold
 
@@ -66,13 +66,15 @@ ul
 //******************************************//
 
 .top-info
+  background: url(../image/bg4.jpg) center/cover no-repeat
+  background-attachment: fixed
   border-bottom: 1px solid #ddd
 
 .top-info-box
   display: flex
   justify-content: flex-end
   align-items: center
-  margin: 10px 0px
+  padding: 10px 0px
 
   &__address
     display: block
@@ -122,17 +124,15 @@ ul
       flex-direction: column
 
     &__logo
-      background: #f1f1f1
       +bp(1100px)
         width: 50%
         display: flex
         order: -3
       +bp(450px)
         width: auto
-
       img
         padding: 15px 0
-        height: 85px
+        height: 125px
         +bp(1380px)
           height: 75px
         +bp(1100px)
@@ -201,10 +201,11 @@ ul
 
 
 
-
 //*******************************************//
 //***********    navigation   ***************//
 //*******************************************//
+
+
 
 nav
   position: relative
@@ -249,11 +250,11 @@ nav
         display: block
 
     &__item
-      padding: 20px 0
+      padding: 15px 0
       width: 100%
       font-weight: bold
       font-family: 'Montserrat', sans-serif
-      font-size: 16px
+      font-size: 15px
       text-align: center
       color: #fff
       transition: .25s ease-in-out
@@ -265,10 +266,11 @@ nav
         width: 100%
         animation: navOpen .25s linear
       &:hover
-        background: #f1f1f1
+        background: #fff
         color: $selectColor
+        box-shadow: 0px 2px 0 #fff, 0px -2px 0 #fff
         +bp(950px)
-          box-shadow: 60px 0 0 #f1f1f1, -60px 0 0 #f1f1f1
+          box-shadow: 60px 0 0 #21252B, -60px 0 0 #21252B
 
       &:first-child
         +bp(950px)
@@ -327,12 +329,12 @@ nav
       &::before
         position: absolute
         content: ""
-        width: 10px
-        height: 10px
+        width: 25px
+        height: 3px
         background: #77777722
-        border: 2px solid #ffffff
-        border-radius: 20%
-        opacity: 1
+        border: 1px solid #ffffff99
+        border-radius: 5%
+        opacity: 0.68
         cursor: pointer
         +bp(450px)
           width: 7px
@@ -343,7 +345,7 @@ nav
 
     .slick-active
       &::before
-        border: 2px solid #ffffff
+        border: 1px solid #ffffff
         background: $selectColor
   
   //настройка контента слайдера
@@ -399,7 +401,7 @@ nav
     position: relative
     margin-bottom: 15px
     font-size: 33px
-    color: #2f2f32
+    color: #f1f1f1
     display: inline-block
     &::before
       position: absolute
@@ -411,7 +413,7 @@ nav
   &__title-second
     margin-top: 5px
     font-size: 20px
-    color: #4f4f4f
+    color: #f4f4f4
 
   .catalog-box
     display: flex
@@ -422,8 +424,8 @@ nav
     &__item
       display: flex
       position: relative
-      width: 24%
-      height: 175px
+      width: 32%
+      height: 200px
       border-radius: 5px
       margin: 10px 1px
       +bp(1200px)
@@ -435,7 +437,7 @@ nav
 
     &__item-name
       padding: 10px 20px
-      background-color: #00000044
+      background-color: #00000077
       border-radius: 5px
       width: 100%
       height: auto
@@ -451,7 +453,7 @@ nav
         content: ""
         height: 100%
         width: 0%
-        background: #171b18dd
+        background: #000000dd
         border-radius: 5px
         z-index: 1
 
@@ -468,7 +470,7 @@ nav
       transition: .9s ease-in-out
       position: absolute
       margin: 0 auto
-      margin-top: 70px
+      margin-top: 85px
       width: 100%
       z-index: 2
       span
@@ -485,7 +487,8 @@ nav
 
 .about-us
   margin-top: 50px
-  background: #5d5d5d
+  background: url(../image/bg4.jpg) center/cover no-repeat
+  background-attachment: fixed
   color: #f1f1f1
   padding: 40px 0
   font-family: 'Noto Sans', sans-serif
