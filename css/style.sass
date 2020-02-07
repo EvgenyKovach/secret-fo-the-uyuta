@@ -46,6 +46,7 @@ ul
 
 .title
   font-size: 26px
+
   font-family: "Montserrat", sans-serif
   font-weight: bold
 
@@ -100,10 +101,13 @@ ul
 
   .sc-vk:hover
     background: #4A76A8
+    box-shadow: 0 0 10px #4A76A8
   .sc-fb:hover
-    background: #224590
+    background: #0050fb
+    box-shadow: 0 0 10px #0051ff
   .sc-insta:hover
     background: #F27F2A
+    box-shadow: 0 0 10px #F27F2A
 
 
 //******************************************//
@@ -180,7 +184,7 @@ ul
         position: absolute
         font-size: 18px
         left: -27px
-        top: 2px
+        top: 0px
         color: $selectColor
 
     &__preview
@@ -219,7 +223,6 @@ nav
     border-radius: 2px
     margin: 10px 0px
     padding: 0 30px
-    border: 2px solid $selectColor
     background: $selectColor
     margin-bottom: 0
     z-index: 10
@@ -250,13 +253,13 @@ nav
         display: block
 
     &__item
-      padding: 15px 0
+      padding: 20px 0
       width: 100%
       font-weight: bold
       font-family: 'Montserrat', sans-serif
       font-size: 15px
       text-align: center
-      color: #fff
+      color: #f1f1f1
       transition: .25s ease-in-out
       +bp(950px)
         display: none
@@ -266,9 +269,9 @@ nav
         width: 100%
         animation: navOpen .25s linear
       &:hover
-        background: #fff
+        background: #f1f1f1
         color: $selectColor
-        box-shadow: 0px 2px 0 #fff, 0px -2px 0 #fff
+        box-shadow: 0px 0px 5px #f1f1f1
         +bp(950px)
           box-shadow: 60px 0 0 #21252B, -60px 0 0 #21252B
 
@@ -302,6 +305,7 @@ nav
       font-size: 34px
     &:hover
       color: #f1f1f1
+      text-shadow: 0 0 3px #f1f1f1
   .slick-prev
     left: 20px
     top: 206px

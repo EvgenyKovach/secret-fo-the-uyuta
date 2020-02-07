@@ -210,14 +210,20 @@ ul {
 
 .top-info-box .sc-vk:hover {
   background: #4A76A8;
+  -webkit-box-shadow: 0 0 10px #4A76A8;
+          box-shadow: 0 0 10px #4A76A8;
 }
 
 .top-info-box .sc-fb:hover {
-  background: #224590;
+  background: #0050fb;
+  -webkit-box-shadow: 0 0 10px #0051ff;
+          box-shadow: 0 0 10px #0051ff;
 }
 
 .top-info-box .sc-insta:hover {
   background: #F27F2A;
+  -webkit-box-shadow: 0 0 10px #F27F2A;
+          box-shadow: 0 0 10px #F27F2A;
 }
 
 .header {
@@ -362,7 +368,7 @@ ul {
   position: absolute;
   font-size: 18px;
   left: -27px;
-  top: 2px;
+  top: 0px;
   color: #01A469;
 }
 
@@ -418,7 +424,6 @@ nav .nav-box {
   border-radius: 2px;
   margin: 10px 0px;
   padding: 0 30px;
-  border: 2px solid #01A469;
   background: #01A469;
   margin-bottom: 0;
   z-index: 10;
@@ -461,13 +466,13 @@ nav .nav-box__burger-open, nav .nav-box__burger-close {
 }
 
 nav .nav-box__item {
-  padding: 15px 0;
+  padding: 20px 0;
   width: 100%;
   font-weight: bold;
   font-family: 'Montserrat', sans-serif;
   font-size: 15px;
   text-align: center;
-  color: #fff;
+  color: #f1f1f1;
   -webkit-transition: .25s ease-in-out;
   transition: .25s ease-in-out;
 }
@@ -487,10 +492,10 @@ nav .nav-box__item {
 }
 
 nav .nav-box__item:hover {
-  background: #fff;
+  background: #f1f1f1;
   color: #01A469;
-  -webkit-box-shadow: 0px 2px 0 #fff, 0px -2px 0 #fff;
-          box-shadow: 0px 2px 0 #fff, 0px -2px 0 #fff;
+  -webkit-box-shadow: 0px 0px 5px #f1f1f1;
+          box-shadow: 0px 0px 5px #f1f1f1;
 }
 
 @media (max-width: 950px) {
@@ -533,6 +538,7 @@ nav .nav-box__item:hover {
 
 .slider .slick-arrow:hover {
   color: #f1f1f1;
+  text-shadow: 0 0 3px #f1f1f1;
 }
 
 .slider .slick-prev {
