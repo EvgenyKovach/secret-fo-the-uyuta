@@ -248,7 +248,7 @@ nav
     &__burger-open,
     &__burger-close
       position: absolute
-      top: 5px
+      top: 14px
       left: 0px
       width: 100%
       display: none
@@ -258,6 +258,7 @@ nav
       padding: 10px 0px
       animation: navIcon .35s linear
       text-align: center
+      z-index: 100
 
 
     &__burger-open
@@ -597,6 +598,7 @@ nav
       flex-direction: column
       justify-content: center
       +bp(1100px)
+        width: 285px
         margin: 20px 0
       &:hover
         .news-box__logo
@@ -637,3 +639,18 @@ nav
 //******************************************//
 //************   brands-box  ***************//
 //******************************************//
+
+.brands-box
+  padding: 35px 0
+  display: flex
+  +bp(1200px)
+    flex-direction: column
+    align-items: center
+
+  &__item
+    width: 18%
+    height: 55px !important
+    margin: 0 10px
+    +bp(1200px)
+      width: 280px
+      margin: 10px 
