@@ -45,16 +45,27 @@ ul
   padding: 0
 
 .title
-  font-size: 26px
-
+  position: relative
+  display: block
+  margin: auto
+  font-size: 30px
   font-family: "Montserrat", sans-serif
   font-weight: bold
+  &::before
+    position: absolute
+    content: ""
+    bottom: -5px
+    width: 100%
+    height: 4px
+    background: $selectColor
 
 
 .box
   max-width: 1380px
   margin: 0 auto
   padding: 0 50px
+  display: flex
+  flex-direction: column
   +bp(1100px)
     padding: 0 35px
   +bp(850px)
@@ -400,30 +411,13 @@ nav
 //******************************************//
 
 .catalog
-  margin-top: 40px
-  &__title-one
-    position: relative
-    margin-bottom: 15px
-    font-size: 33px
-    color: #f1f1f1
-    display: inline-block
-    &::before
-      position: absolute
-      content: ""
-      bottom: -5px
-      width: 100%
-      height: 4px
-      background: $selectColor
-  &__title-second
-    margin-top: 5px
-    font-size: 20px
-    color: #f4f4f4
+  margin-top: 35px
 
   .catalog-box
     display: flex
     flex-wrap: wrap
     justify-content: space-between
-    margin-top: 15px
+    margin-top: 35px
 
     &__item
       display: flex
@@ -490,7 +484,7 @@ nav
 //******************************************//
 
 .about-us
-  margin-top: 50px
+  margin-top: 35px
   background: url(../image/bg4.jpg) center/cover no-repeat
   background-attachment: fixed
   color: #f1f1f1
@@ -528,6 +522,62 @@ nav
 
 
 //******************************************//
+//************   form-box  *****************//
+//******************************************//
+
+.back-form 
+  margin: 35px 0
+  
+
+  .back-form-box
+    display: flex
+    flex-direction: column
+    margin: 30px 0
+
+    input::-webkit-input-placeholder,
+    textarea::-webkit-input-placeholder
+      color: #cccccc
+    
+
+    &__input,
+    &__textarea,
+    &__sbmt
+      font-family: 'Montserrat', sans-serif
+      font-size: 12px
+      padding: 15px 25px
+      min-width: 300px
+      margin: 7px auto
+      border: 1px solid $selectColor
+      border-radius: 3px
+      background: #11111144
+      box-shadow: 4px 4px 4px #00000099
+      color: #f1f1f1
+      transition: .15s linear
+      &:focus
+        outline: none
+        box-shadow: 0 0 10px $selectColor
+
+    &__textarea
+      resize: none
+    &__sbmt
+      color: $selectColor
+      min-width: 150px
+      margin-top: 20px
+      font-weight: bold
+      width: 150px
+      cursor: pointer
+      transition: .15s linear
+      box-shadow: 4px 6px 0px $selectColor, -4px -6px 0px $selectColor
+      &:hover,
+      &:focus
+        color: #fff
+        background: $selectColor
+        box-shadow: 0px 0px 1px 0 #fff
+
+//******************************************//
 //************   news-box  *****************//
 //******************************************//
 
+.news
+  background: url(../image/bg4.jpg) center/cover no-repeat
+  background-attachment: fixed
