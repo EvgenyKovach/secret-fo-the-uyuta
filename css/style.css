@@ -101,23 +101,25 @@ a {
   text-align: center;
   font-weight: bold;
   border-radius: 3px;
-  background: #01A469;
-  color: #fff;
-  border: 3px solid transparent;
-  -webkit-transition: .25s ease-in-out;
-  transition: .25s ease-in-out;
+  border: 2px solid transparent;
+  -webkit-transition: .15s linear;
+  transition: .15s linear;
+  -webkit-box-shadow: 3px 3px 0px #01A469, -3px -3px 0px #01A469;
+          box-shadow: 3px 3px 0px #01A469, -3px -3px 0px #01A469;
+}
+
+.btn:hover, .btn:focus {
+  color: #ffffff;
+  text-shadow: 0 0 5px #01A469;
+  -webkit-box-shadow: 0px 0px 10px #01A469;
+          box-shadow: 0px 0px 10px #01A469;
+  border: 2px solid #99d3be;
 }
 
 @media (max-width: 450px) {
   .btn {
     margin: auto;
   }
-}
-
-.btn:hover {
-  color: #01A469;
-  background: #fff;
-  border-bottom: 3px solid #01A469;
 }
 
 ul {
@@ -694,6 +696,7 @@ nav .nav-box__item:hover {
   padding: 15px 30px;
   margin: 15px 0;
   z-index: 3;
+  background: #21252B;
 }
 
 .catalog {
@@ -875,7 +878,7 @@ nav .nav-box__item:hover {
   color: #cccccc;
 }
 
-.back-form .back-form-box__input, .back-form .back-form-box__textarea, .back-form .back-form-box__sbmt {
+.back-form .back-form-box__input, .back-form .back-form-box__textarea {
   font-family: 'Montserrat', sans-serif;
   font-size: 12px;
   padding: 15px 25px;
@@ -891,10 +894,16 @@ nav .nav-box__item:hover {
   transition: .15s linear;
 }
 
-.back-form .back-form-box__input:focus, .back-form .back-form-box__textarea:focus, .back-form .back-form-box__sbmt:focus {
+@media (max-width: 650px) {
+  .back-form .back-form-box__input, .back-form .back-form-box__textarea {
+    min-width: 225px;
+  }
+}
+
+.back-form .back-form-box__input:focus, .back-form .back-form-box__textarea:focus {
   outline: none;
-  -webkit-box-shadow: 0 0 10px #01A469;
-          box-shadow: 0 0 10px #01A469;
+  -webkit-box-shadow: 2px 2px 3px #01A469, -2px -2px 3px #01A469;
+          box-shadow: 2px 2px 3px #01A469, -2px -2px 3px #01A469;
 }
 
 .back-form .back-form-box__textarea {
@@ -902,27 +911,108 @@ nav .nav-box__item:hover {
 }
 
 .back-form .back-form-box__sbmt {
-  color: #01A469;
+  margin: 7px auto;
+  border-radius: 3px;
+  color: #f1f1f1;
+  background: #11111144;
   min-width: 150px;
   margin-top: 20px;
   font-weight: bold;
   width: 150px;
   cursor: pointer;
-  -webkit-transition: .15s linear;
-  transition: .15s linear;
-  -webkit-box-shadow: 4px 6px 0px #01A469, -4px -6px 0px #01A469;
-          box-shadow: 4px 6px 0px #01A469, -4px -6px 0px #01A469;
-}
-
-.back-form .back-form-box__sbmt:hover, .back-form .back-form-box__sbmt:focus {
-  color: #fff;
-  background: #01A469;
-  -webkit-box-shadow: 0px 0px 1px 0 #fff;
-          box-shadow: 0px 0px 1px 0 #fff;
 }
 
 .news {
+  padding: 35px 0;
   background: url(../image/bg4.jpg) center/cover no-repeat;
   background-attachment: fixed;
+}
+
+.news .news-box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  margin: 35px 0;
+}
+
+@media (max-width: 1100px) {
+  .news .news-box {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+
+.news .news-box__item {
+  width: 25%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+@media (max-width: 1100px) {
+  .news .news-box__item {
+    margin: 20px 0;
+  }
+}
+
+.news .news-box__item:hover .news-box__logo img {
+  -webkit-box-shadow: 0 0 10px #01A469;
+          box-shadow: 0 0 10px #01A469;
+}
+
+.news .news-box__title {
+  margin-top: 10px;
+  font-size: 16px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: bold;
+}
+
+.news .news-box__logo {
+  position: relative;
+}
+
+.news .news-box__logo img {
+  border-radius: 5px;
+  -webkit-transition: .15s linear;
+  transition: .15s linear;
+  width: 100%;
+  height: 200px;
+}
+
+.news .news-box__date {
+  color: #232323;
+  font-weight: bold;
+  font-family: "Montserrat", sans-serif;
+  position: absolute;
+  bottom: 3px;
+  right: 0;
+  padding: 10px 15px;
+  background: #ffffff99;
+  border-radius: 5px;
+}
+
+.news .news-box__all-news {
+  margin-left: auto;
+  -webkit-transition: .15s linear;
+  transition: .15s linear;
+}
+
+.news .news-box__all-news:hover {
+  text-shadow: 0 0 5px #01A469;
 }
 /*# sourceMappingURL=style.css.map */
