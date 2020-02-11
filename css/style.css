@@ -134,6 +134,7 @@ ul {
   font-size: 30px;
   font-family: "Montserrat", sans-serif;
   font-weight: bold;
+  text-align: center;
 }
 
 .title::before {
