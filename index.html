@@ -9,6 +9,7 @@
   <link rel="stylesheet" type="text/css" href="slick/slick.css"/>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css">
   <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700|Noto+Sans&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
   <!--JS-->
   <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
   <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
@@ -206,7 +207,7 @@
           </div>
         </a>
         <a href="#"  class="news-box__item">
-          <div class="news-box__logo">
+          <div class="news-box__logo"> 
             <img src="image/news/news-3.jpg" alt="">
             <div class="news-box__date">24.08.2011</div>
           </div>
@@ -229,6 +230,32 @@
       </div>
     </div>
   </div>
+  <footer>
+    <div class="box">
+      <div class="footer-box">
+        <div class="footer-box__item footer-box__logo">
+          <img src="image/logo_g.png">
+        </div>
+        <div class="footer-box__item footer-box__nav">
+          <a href="#" class="footer-box__nav-item">Главная</a>
+          <a href="#" class="footer-box__nav-item">О компании</a>
+          <a href="#" class="footer-box__nav-item">Новости</a>
+          <a href="#" class="footer-box__nav-item">Каталог мебели</a>
+          <a href="#" class="footer-box__nav-item">Форма обратной связи</a>
+        </div>
+        <div class="footer-box__item footer-box__contacts">
+          <a href="#" class="footer-box__contacts-item">+7 (3532)  25-13-03</a>
+          <a href="#" class="footer-box__contacts-item">zakaz@secrekuyuta.ru</a>
+          <a href="#" class="footer-box__contacts-item">г. Оренбург,  пр. Победы, 10</a>
+          <div class="footer-box__contacts-item social">
+            <a href="#" class="social__btn sc-vk"><i class="fab fa-vk"></i></a>
+            <a href="#" class="social__btn sc-fb"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" class="social__btn sc-insta"><i class="fab fa-instagram"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
   <script type="text/javascript">
 
     $(document).ready(function(){
@@ -251,6 +278,36 @@
         pauseOnDotsHover: true,
         dotsClass: "slider-dots-box",
         autoplay: true
+      });
+
+      $(window).scroll(function() {
+        let height = 10;
+        height = $(window).scrollTop();
+          if (height > 150) {
+            $('.catalog-box__item-name').addClass('animated zoomIn');
+            $('.catalog-box__item-name').css({opacity: "1"});
+          }
+          else {
+            $('.catalog-box__item-name').css({opacity: "0"});
+            $('.catalog-box__item-name').removeClass('animated zoomIn');
+          }
+
+          if (height > 1300) {
+            $('.back-form-box').addClass('animated fadeInUp');
+            $('.back-form-box').css({opacity: "1"});
+          }
+          else {
+            $('.back-form-box').css({opacity: "0"});
+            $('.back-form-box').removeClass('animated fadeInUp');
+          }
+
+          if(height > 2050){
+            $('.news-box__item').addClass('animated zoomIn');
+            $('.news-box__item').css({opacity: "1"})
+          } else{
+            $('.news-box__item').css({opacity: "0"})
+            $('.news-box__item').removeClass('animated zoomIn');
+          }
       });
     });
   </script>

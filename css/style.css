@@ -206,7 +206,7 @@ ul {
   display: flex;
 }
 
-.top-info-box .social__btn {
+.social__btn {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -221,27 +221,27 @@ ul {
   transition: .25s ease-in-out;
 }
 
-.top-info-box .social__btn i {
+.social__btn i {
   margin: auto;
 }
 
-.top-info-box .social__btn:last-child {
+.social__btn:last-child {
   margin-right: 0;
 }
 
-.top-info-box .sc-vk:hover {
+.sc-vk:hover {
   background: #4A76A8;
   -webkit-box-shadow: 0 0 10px #4A76A8;
           box-shadow: 0 0 10px #4A76A8;
 }
 
-.top-info-box .sc-fb:hover {
+.sc-fb:hover {
   background: #0050fb;
   -webkit-box-shadow: 0 0 10px #0051ff;
           box-shadow: 0 0 10px #0051ff;
 }
 
-.top-info-box .sc-insta:hover {
+.sc-insta:hover {
   background: #F27F2A;
   -webkit-box-shadow: 0 0 10px #F27F2A;
           box-shadow: 0 0 10px #F27F2A;
@@ -756,6 +756,9 @@ nav .nav-box__item:hover {
   font-weight: bold;
   font-size: 22px;
   z-index: 1;
+  -webkit-transition: .2s linear;
+  transition: .2s linear;
+  opacity: 0;
 }
 
 .catalog .catalog-box__item-name::before {
@@ -840,6 +843,14 @@ nav .nav-box__item:hover {
   text-align: justify;
 }
 
+@media (max-width: 600px) {
+  .about-us__text {
+    -ms-flex-preferred-size: 100%;
+        flex-basis: 100%;
+    margin-left: 0;
+  }
+}
+
 .about-us__img {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -872,6 +883,7 @@ nav .nav-box__item:hover {
       -ms-flex-direction: column;
           flex-direction: column;
   margin: 30px 0;
+  opacity: 0;
 }
 
 .back-form .back-form-box input::-webkit-input-placeholder,
@@ -1031,13 +1043,8 @@ nav .nav-box__item:hover {
 
 @media (max-width: 1200px) {
   .brands-box {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
   }
 }
 
@@ -1049,8 +1056,136 @@ nav .nav-box__item:hover {
 
 @media (max-width: 1200px) {
   .brands-box__item {
-    width: 280px;
-    margin: 10px;
+    width: 200px;
+    margin: 10px auto;
   }
+}
+
+footer {
+  background: #121212;
+}
+
+.footer-box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 30px 0;
+  font-family: "Montserrat", sans-serif;
+  font-weight: bold;
+  margin-right: 30px;
+}
+
+@media (max-width: 750px) {
+  .footer-box {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+}
+
+.footer-box__logo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 15px;
+}
+
+@media (max-width: 750px) {
+  .footer-box__logo {
+    width: 100%;
+  }
+}
+
+.footer-box__logo img {
+  width: 155px;
+}
+
+@media (max-width: 750px) {
+  .footer-box__logo img {
+    margin: auto;
+  }
+}
+
+.footer-box__nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+@media (max-width: 1230px) {
+  .footer-box__nav {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
+@media (max-width: 750px) {
+  .footer-box__nav {
+    -webkit-box-ordinal-group: 0;
+        -ms-flex-order: -1;
+            order: -1;
+  }
+}
+
+.footer-box__nav-item {
+  margin: 5px 15px;
+  -webkit-transition: .15s ease-in-out;
+  transition: .15s ease-in-out;
+}
+
+@media (max-width: 1230px) {
+  .footer-box__nav-item {
+    margin: 5px 0;
+  }
+}
+
+.footer-box__nav-item:hover {
+  color: #01A469;
+}
+
+.footer-box__contacts {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+@media (max-width: 750px) {
+  .footer-box__contacts {
+    width: 100%;
+    margin-top: 15px;
+  }
+}
+
+.footer-box__contacts-item {
+  margin: 5px 0;
+  -webkit-transition: .15s ease-in-out;
+  transition: .15s ease-in-out;
+}
+
+@media (max-width: 750px) {
+  .footer-box__contacts-item {
+    margin: 5px auto;
+  }
+}
+
+.footer-box__contacts-item:hover {
+  color: #01A469;
+}
+
+.footer-box .social {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 /*# sourceMappingURL=style.css.map */

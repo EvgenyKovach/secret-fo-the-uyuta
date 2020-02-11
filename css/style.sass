@@ -96,30 +96,30 @@ ul
   &__social
     display: flex
 
-  .social__btn
-    display: flex
-    width: 32px
-    height: 32px
-    margin: 0 5px
-    font-size: 20px
-    color: #ffffff
-    background: #727272
-    border-radius: 2px
-    transition: .25s ease-in-out
-    i
-      margin: auto
-    &:last-child
-      margin-right: 0
+.social__btn
+  display: flex
+  width: 32px
+  height: 32px
+  margin: 0 5px
+  font-size: 20px
+  color: #ffffff
+  background: #727272
+  border-radius: 2px
+  transition: .25s ease-in-out
+  i
+    margin: auto
+  &:last-child
+    margin-right: 0
 
-  .sc-vk:hover
-    background: #4A76A8
-    box-shadow: 0 0 10px #4A76A8
-  .sc-fb:hover
-    background: #0050fb
-    box-shadow: 0 0 10px #0051ff
-  .sc-insta:hover
-    background: #F27F2A
-    box-shadow: 0 0 10px #F27F2A
+.sc-vk:hover
+  background: #4A76A8
+  box-shadow: 0 0 10px #4A76A8
+.sc-fb:hover
+  background: #0050fb
+  box-shadow: 0 0 10px #0051ff
+.sc-insta:hover
+  background: #F27F2A
+  box-shadow: 0 0 10px #F27F2A
 
 
 //******************************************//
@@ -447,6 +447,8 @@ nav
       font-weight: bold
       font-size: 22px
       z-index: 1
+      transition: .2s linear
+      opacity: 0
       &::before
         top: 0
         left: 0
@@ -513,6 +515,9 @@ nav
     margin-left: 30px
     padding: 20px 0
     text-align: justify
+    +bp(600px)
+      flex-basis: 100%
+      margin-left: 0
 
   &__img
     display: flex
@@ -536,6 +541,7 @@ nav
     display: flex
     flex-direction: column
     margin: 30px 0
+    opacity: 0
 
     input::-webkit-input-placeholder,
     textarea::-webkit-input-placeholder
@@ -645,13 +651,74 @@ nav
   display: flex
   justify-content: space-between
   +bp(1200px)
-    flex-direction: column
-    align-items: center
+    flex-wrap: wrap
 
   &__item
     width: 18%
     height: 55px !important
     margin: 0 10px
     +bp(1200px)
-      width: 280px
-      margin: 10px 
+      width: 200px
+      margin: 10px auto
+
+
+//******************************************//
+//************   footer-box  ***************//
+//******************************************//
+footer
+  background: #121212
+
+.footer-box
+  display: flex
+  justify-content: space-between
+  align-items: center
+  padding: 30px 0
+  font-family: "Montserrat", sans-serif
+  font-weight: bold
+  margin-right: 30px
+  +bp(750px)
+    flex-wrap: wrap
+  
+  &__logo 
+    display: flex
+    margin-top: 15px
+    +bp(750px)
+      width: 100%
+    img
+      width: 155px
+      +bp(750px)
+        margin: auto
+  &__nav
+    display: flex
+    +bp(1230px)
+      flex-direction: column
+    +bp(750px)
+      order: -1
+
+  &__nav-item
+    margin: 5px 15px
+    transition: .15s ease-in-out
+    +bp(1230px)
+      margin: 5px 0
+    &:hover
+      color: $selectColor
+
+  &__contacts
+    display: flex
+    flex-direction: column
+    +bp(750px)
+      width: 100%
+      margin-top: 15px
+
+  &__contacts-item
+    margin: 5px 0
+    transition: .15s ease-in-out
+    +bp(750px)
+      margin: 5px auto
+    &:hover
+      color: $selectColor
+
+  .social
+    display: flex
+
+  
