@@ -32,7 +32,7 @@
   <div class="header">
     <div class="box">
       <div class="header-box">
-        <a href="#" class="header-box__logo">
+        <a href="/" class="header-box__logo">
           <img src="image/logo_g.png">
         </a>
         <div class="header-box__preview">
@@ -230,6 +230,11 @@
       </div>
     </div>
   </div>
+  <div class="back-form-call">
+    <form method="post">
+      <input type="text" name="pep" id="">
+    </form>
+  </div>
   <footer>
     <div class="box">
       <div class="footer-box">
@@ -282,17 +287,19 @@
 
       $(window).scroll(function() {
         let height = 10;
+        console.log(height);
         height = $(window).scrollTop();
           if (height > 150) {
             $('.catalog-box__item-name').addClass('animated zoomIn');
             $('.catalog-box__item-name').css({opacity: "1"});
+            console.log(height);
           }
           else {
             $('.catalog-box__item-name').css({opacity: "0"});
             $('.catalog-box__item-name').removeClass('animated zoomIn');
           }
 
-          if (height > 1300) {
+          if (height > 1350) {
             $('.back-form-box').addClass('animated fadeInUp');
             $('.back-form-box').css({opacity: "1"});
           }
@@ -307,6 +314,13 @@
           } else{
             $('.news-box__item').css({opacity: "0"})
             $('.news-box__item').removeClass('animated zoomIn');
+          }
+          if(height > 2000){
+            $('.brands-box__item').addClass('animated zoomInDown');
+            $('.brands-box__item').css({opacity: "1"})
+          } else{
+            $('.brands-box__item').css({opacity: "0"})
+            $('.brands-box__item').removeClass('animated zoomInDown');
           }
       });
     });
