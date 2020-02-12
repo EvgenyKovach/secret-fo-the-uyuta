@@ -604,7 +604,7 @@ nav
 
   .news-box
     display: flex
-    justify-content: space-between
+    justify-content: space-around
     margin: 35px 0
     +bp(1100px)
       flex-direction: column
@@ -615,14 +615,16 @@ nav
         animation-delay: #{$i*0.15}s
 
     &__item
-      width: 25%
+      width: 29%
       height: 100%
       display: flex
       flex-direction: column
       justify-content: center
       +bp(1100px)
-        width: 285px
+        width: 350px
         margin: 20px 0
+      +bp(650px)
+        width: 285px
       &:hover
         .news-box__logo
           img
