@@ -308,19 +308,20 @@
             $('.back-form-box').removeClass('animated fadeInUp');
           }
 
-          if(height > 2050){
-            $('.news-box__item').addClass('animated zoomIn');
+          if(height > 1900){
+            $('.news-box__item').addClass('animated flipInY');
             $('.news-box__item').css({opacity: "1"})
           } else{
             $('.news-box__item').css({opacity: "0"})
-            $('.news-box__item').removeClass('animated zoomIn');
+            $('.news-box__item').removeClass('animated flipInY');
           }
-          if(height > 2000){
-            $('.brands-box__item').addClass('animated zoomInDown');
+
+          if(height > 2100){
+            $('.brands-box__item').addClass('animated zoomIn');
             $('.brands-box__item').css({opacity: "1"})
           } else{
             $('.brands-box__item').css({opacity: "0"})
-            $('.brands-box__item').removeClass('animated zoomInDown');
+            $('.brands-box__item').removeClass('animated zoomIn');
           }
       });
     });
