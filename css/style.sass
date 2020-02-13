@@ -152,7 +152,7 @@ ul
         width: auto
       img
         padding: 15px 0
-        height: 125px
+        height: 115px
         +bp(1380px)
           height: 75px
         +bp(1100px)
@@ -831,5 +831,90 @@ footer
     height: 100%
     z-index: 2
 
-// страница каталога ************************
+//------- страница каталога --------------
+.wrapper
+  background: url(../image/bg4.jpg) center/cover no-repeat
+  background-attachment: fixed
 
+.wr-box
+  display: flex
+  margin: 35px 0
+  +bp(1200px)
+    flex-wrap: wrap
+
+  .left-side
+    margin: 10px
+    width: 25%
+    +bp(1200px)
+      width: 100%
+
+    .left-menu
+      display: flex
+      flex-direction: column
+      font-family: "Montserrat", sans-serifs
+      +bp(1200px)
+        flex-direction: row
+        flex-wrap: wrap
+
+      &__title
+        margin: 0
+        margin-bottom: 10px
+        font-size: 24px
+        font-weight: bold
+        +bp(1200px)
+          display: block
+          width: 100%
+
+      @for $i from 1 through 13 
+        .left-menu__item:nth-child(#{$i})
+          animation-delay: #{$i*0.1}s
+
+      &__item
+        margin: 7px 0
+        font-weight: bold
+        font-size: 20px
+        transition: .2s ease-in-out
+        animation: left-menu-items 0.8s ease-in-out
+        animation-fill-mode: backwards
+        +bp(1200px)
+          margin: 7px
+        &:hover
+          color: $selectColor
+          transform: translate(1px, 1px)
+        i
+          font-size: 14px
+          margin-right: 3px
+          color: $selectColor
+          transition: .2s ease-in-out
+
+  .right-side
+    width: 70%
+    margin-left: auto
+    font-family: "Monsterrat", sans-serif
+    +bp(1200px)
+      width: 100%
+    &__title
+      padding: 0
+      margin: 0
+      font-size: 24px
+
+    .rs-photos
+      width: 100%
+      display: flex
+      flex-wrap: wrap
+      justify-content: space-between
+      margin-top: 20px
+      +bp(550px)
+        justify-content: center
+
+      &__item
+        width: 32%
+        padding: 5px
+        +bp(800px)
+          width: 48%
+        +bp(550px)
+          width: 280px
+        img
+          height: 205px
+          +bp(1120px) 
+            height: 175px
