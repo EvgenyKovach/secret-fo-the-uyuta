@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <!--CSS-->
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" type="text/css" href="slick/slick.css"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700|Noto+Sans&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
+  <!--JS-->
+  <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+  <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+  <script type="text/javascript" src="slick/slick.min.js"></script>
+  <title>Helloworld</title>
+</head>
+<body>
+  <div class="top-info">
+    <div class="box">
+      <div class="top-info-box">
+        <a href="#" class="top-info-box__address">г. Оренбург, пр.Победы 10</a>
+        <div class="top-info-box__social">
+          <a href="#" class="social__btn sc-vk"><i class="fab fa-vk"></i></a>
+          <a href="#" class="social__btn sc-fb"><i class="fab fa-facebook-f"></i></a>
+          <a href="#" class="social__btn sc-insta"><i class="fab fa-instagram"></i></a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="header">
+    <div class="box">
+      <div class="header-box">
+        <a href="/" class="header-box__logo">
+          <img src="image/logo_g.png">
+        </a>
+        <div class="header-box__preview">
+          Создаём уют дома<br>собственными руками
+        </div>
+        <div class="header-box__tel">
+          <a href="#" class="header-box__call"><i class="fas fa-phone-alt"></i>+7 (3532) 25-13-03</a>
+          <a href="#" class="header-box__tel-btn">Заказать звонок</a>
+        </div>
+        <div class="header-box__email">
+          
+          <a href="#" class="header-box__call"><i class="far fa-envelope"></i>zakaz@sekretuyuta.ru</a>
+          <a href="#" class="header-box__email-btn">Написать нам</a>
+        </div>
+        <div class="header-box__btn-form">
+          <a class="header-box__btnBkform btn get-form">Отправить заявку</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <nav>
+    <div class="box">
+      <i class="fas fa-bars nav-box__burger-open"></i>
+      <i class="fas fa-times nav-box__burger-close"></i>
+      <div class="nav-box">
+        <a href="#" class="nav-box__item"><span>Компания</span></a>
+        <a href="#" class="nav-box__item"><span>Галерея</span></a>
+        <a href="#" class="nav-box__item"><span>Отзывы</span></a>
+        <a href="#" class="nav-box__item"><span>Вопрос/Ответ</span></a>
+        <a href="#" class="nav-box__item"><span>Акции</span></a>
+        <a href="#" class="nav-box__item"><span>Контакты</span></a>
+      </div>
+    </div>
+  </nav>
+
+  <div class="wrapper">
+    <div class="box">
+      <div class="wr-box">
+        <div class="wr-box__left-side">
+          
+        </div>
+        <div class="wr-box__right-side">
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="back-form-call">
+    <a class="form-call-close-full"></a>
+    <form method="post">
+      <p class="pre-text">Оставьте заявку и мы свяжимся с вами в кратчайшие сроки</p>
+      <a class="form-call-close"><i class="fas fa-times"></i></a>
+      <input type="text" name="name" id="" placeholder="Имя">
+      <input type="tel" name="tel" id="" placeholder="Телефон">
+      <input class="btn" type="submit" value="Заказать звонок">
+      <p class="pre-pravila">Отправляя форму вы соглашаетесь <a href="#">политикой конфидициальности</a></p>
+    </form>
+  </div>
+
+  <footer>
+    <div class="box">
+      <div class="footer-box">
+        <div class="footer-box__item footer-box__logo">
+          <img src="image/logo_g.png">
+        </div>
+        <div class="footer-box__item footer-box__nav">
+          <a href="#" class="footer-box__nav-item">Главная</a>
+          <a href="#" class="footer-box__nav-item">О компании</a>
+          <a href="#" class="footer-box__nav-item">Новости</a>
+          <a href="#" class="footer-box__nav-item">Каталог мебели</a>
+          <a href="#" class="footer-box__nav-item">Форма обратной связи</a>
+        </div>
+        <div class="footer-box__item footer-box__contacts">
+          <a href="#" class="footer-box__contacts-item">+7 (3532)  25-13-03</a>
+          <a href="#" class="footer-box__contacts-item">zakaz@secrekuyuta.ru</a>
+          <a href="#" class="footer-box__contacts-item">г. Оренбург,  пр. Победы, 10</a>
+          <div class="footer-box__contacts-item social">
+            <a href="#" class="social__btn sc-vk"><i class="fab fa-vk"></i></a>
+            <a href="#" class="social__btn sc-fb"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" class="social__btn sc-insta"><i class="fab fa-instagram"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <script type="text/javascript">
+    // burger-menu START
+    $(document).ready(function(){
+      $('.nav-box__burger-open').click(function () {
+        $('.nav-box__item').css({display: "flex"});
+        $('.nav-box__burger-open').css({display: "none"});
+        $('.nav-box__burger-close').css({display: "block"});
+      });
+      $('.nav-box__burger-close').click(function () {
+        $('.nav-box__item').css({display: "none"});
+        $('.nav-box__burger-open').css({display: "block"});
+        $('.nav-box__burger-close').css({display: "none"});
+      });
+      //burger-menu END
+
+      $('.form-call-close').click(function () {
+        $('.back-form-call').css({display: "none"});
+      })
+      $('.form-call-close-full').click(function () {
+        $('.back-form-call').css({display: "none"});
+      })
+      
+      $('.get-form').click(function () {
+        $('.back-form-call').css({display: "flex"});
+        $('.back-form-call').css({animation: "b-f-call 0.5s ease-in-out"});
+      })
+
+      $('.slider').slick({
+        prevArrow: "<i class='fas fa-chevron-circle-left slick-arrow slick-prev'></i>",
+        nextArrow: "<i class='fas fa-chevron-circle-right slick-arrow slick-next'></i>",
+        cssEase: 'ease-in-out',
+        dots: true,
+        pauseOnDotsHover: true,
+        dotsClass: "slider-dots-box",
+        autoplay: true
+      });
+
+      $(window).scroll(function() {
+        let height = 10;
+        console.log(height);
+        height = $(window).scrollTop();
+          if (height > 150) {
+            $('.catalog-box__item-name').addClass('animated zoomIn');
+            $('.catalog-box__item-name').css({opacity: "1"});
+            console.log(height);
+          }
+          else {
+            $('.catalog-box__item-name').css({opacity: "0"});
+            $('.catalog-box__item-name').removeClass('animated zoomIn');
+          }
+
+          if (height > 1350) {
+            $('.back-form-box').addClass('animated fadeInUp');
+            $('.back-form-box').css({opacity: "1"});
+          }
+          else {
+            $('.back-form-box').css({opacity: "0"});
+            $('.back-form-box').removeClass('animated fadeInUp');
+          }
+
+          if(height > 1900){
+            $('.news-box__item').addClass('animated flipInY');
+            $('.news-box__item').css({opacity: "1"})
+          } else{
+            $('.news-box__item').css({opacity: "0"})
+            $('.news-box__item').removeClass('animated flipInY');
+          }
+
+          if(height > 2100){
+            $('.brands-box__item').addClass('animated zoomIn');
+            $('.brands-box__item').css({opacity: "1"})
+          } else{
+            $('.brands-box__item').css({opacity: "0"})
+            $('.brands-box__item').removeClass('animated zoomIn');
+          }
+      });
+    });
+  </script>
+</body>
+</html>

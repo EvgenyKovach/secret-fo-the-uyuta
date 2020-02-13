@@ -48,7 +48,7 @@
           <a href="#" class="header-box__email-btn">Написать нам</a>
         </div>
         <div class="header-box__btn-form">
-          <a href="#" class="header-box__btnBkform btn">Отправить заявку</a>
+          <a class="header-box__btnBkform btn get-form">Отправить заявку</a>
         </div>
       </div>
     </div>
@@ -230,11 +230,19 @@
       </div>
     </div>
   </div>
+
   <div class="back-form-call">
+    <a class="form-call-close-full"></a>
     <form method="post">
-      <input type="text" name="pep" id="">
+      <p class="pre-text">Оставьте заявку и мы свяжимся с вами в кратчайшие сроки</p>
+      <a class="form-call-close"><i class="fas fa-times"></i></a>
+      <input type="text" name="name" id="" placeholder="Имя">
+      <input type="tel" name="tel" id="" placeholder="Телефон">
+      <input class="btn" type="submit" value="Заказать звонок">
+      <p class="pre-pravila">Отправляя форму вы соглашаетесь <a href="#">политикой конфидициальности</a></p>
     </form>
   </div>
+
   <footer>
     <div class="box">
       <div class="footer-box">
@@ -262,7 +270,7 @@
     </div>
   </footer>
   <script type="text/javascript">
-
+    // burger-menu START
     $(document).ready(function(){
       $('.nav-box__burger-open').click(function () {
         $('.nav-box__item').css({display: "flex"});
@@ -274,6 +282,19 @@
         $('.nav-box__burger-open').css({display: "block"});
         $('.nav-box__burger-close').css({display: "none"});
       });
+      //burger-menu END
+
+      $('.form-call-close').click(function () {
+        $('.back-form-call').css({display: "none"});
+      })
+      $('.form-call-close-full').click(function () {
+        $('.back-form-call').css({display: "none"});
+      })
+      
+      $('.get-form').click(function () {
+        $('.back-form-call').css({display: "flex"});
+        $('.back-form-call').css({animation: "b-f-call 0.5s ease-in-out"});
+      })
 
       $('.slider').slick({
         prevArrow: "<i class='fas fa-chevron-circle-left slick-arrow slick-prev'></i>",
