@@ -1,16 +1,18 @@
 @keyframes navOpen
   0%
-    transform: scaleY(0.0)
+    transform: scaleY(0.5)
+    opcity: 0
   100%
+    opacity: 1
     transform: scaleY(1)
 
 @keyframes navIcon
   0%
     opacity: 0
-    transform: scale(.5)
+    transform: translateY(2px)
   100%
     opacity: 1
-    transform: scale(1)
+    transform: translateY(0px)
 
 @keyframes catalogItemHover
   0%
@@ -20,10 +22,12 @@
     
 @keyframes b-f-call
   0%
-    transform: scale(0) rotate(60deg)
+    transform: scale(0) rotateY(150deg)
+    border-radius: 100%
     opacity: 0
   100%
-    transform: scale(1) rotate(0deg)
+    transform: scale(1) rotateY(0deg)
+    border-radius: 0%
     opacity: 1
 
 @keyframes left-menu-items

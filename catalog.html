@@ -198,12 +198,13 @@
     // burger-menu START
     $(document).ready(function(){
       $('.nav-box__burger-open').click(function () {
-        $('.nav-box__item').css({display: "flex"});
+        $('.nav-box').css({display: "block"});
+        $('.nav-box').css({animation: "navOpen .45s linear"});
         $('.nav-box__burger-open').css({display: "none"});
         $('.nav-box__burger-close').css({display: "block"});
       });
       $('.nav-box__burger-close').click(function () {
-        $('.nav-box__item').css({display: "none"});
+        $('.nav-box').css({display: "none"});
         $('.nav-box__burger-open').css({display: "block"});
         $('.nav-box__burger-close').css({display: "none"});
       });
@@ -218,7 +219,7 @@
       
       $('.get-form').click(function () {
         $('.back-form-call').css({display: "flex"});
-        $('.back-form-call').css({animation: "b-f-call 0.5s ease-in-out"});
+        $('.back-form-call').css({animation: "b-f-call 1s ease-in-out"});
       })
 
       $('.slider').slick({
