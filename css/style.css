@@ -1962,11 +1962,11 @@ footer {
 
 .wrapper .wrapper-box .right-side__title {
   display: inline-block;
-  margin: 0;
-  margin-bottom: 10px;
+  padding-bottom: 10px;
   font-family: "Monsterrat", sans-serif;
   font-size: 24px;
   font-weight: bold;
+  margin: 0;
   border-bottom: 4px solid #01A469;
   pointer: none;
 }
