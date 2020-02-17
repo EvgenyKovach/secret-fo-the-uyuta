@@ -329,16 +329,17 @@ ul {
           box-shadow: 0 0 10px #4A76A8;
 }
 
-.sc-fb:hover {
-  background: #0050fb;
-  -webkit-box-shadow: 0 0 10px #0051ff;
-          box-shadow: 0 0 10px #0051ff;
+.sc-ok:hover {
+  background: #fb4f00;
+  -webkit-box-shadow: 0 0 10px #fb4f00;
+          box-shadow: 0 0 10px #fb4f00;
 }
 
 .sc-insta:hover {
-  background: #F27F2A;
-  -webkit-box-shadow: 0 0 10px #F27F2A;
-          box-shadow: 0 0 10px #F27F2A;
+  background: -webkit-gradient(linear, right top, left top, from(#ff9249), to(#C23099));
+  background: linear-gradient(to left, #ff9249, #C23099);
+  -webkit-box-shadow: 3px 3px 10px #ff9249, -3px -3px 10px #C23099;
+          box-shadow: 3px 3px 10px #ff9249, -3px -3px 10px #C23099;
 }
 
 .header {
@@ -1923,6 +1924,13 @@ footer {
   display: flex;
   width: 25%;
   font-family: "Montserrat", sans-serif;
+  padding-right: 20px;
+}
+
+@media (max-width: 900px) {
+  .wrapper .wrapper-box .left-side {
+    display: none;
+  }
 }
 
 .wrapper .wrapper-box .list-menu {
@@ -1957,7 +1965,13 @@ footer {
 
 .wrapper .wrapper-box .right-side {
   width: 70%;
-  margin-top: 10px;
+}
+
+@media (max-width: 900px) {
+  .wrapper .wrapper-box .right-side {
+    width: 100%;
+    padding-right: 20px;
+  }
 }
 
 .wrapper .wrapper-box .right-side__title {
@@ -1967,7 +1981,19 @@ footer {
   font-size: 24px;
   font-weight: bold;
   margin: 0;
-  border-bottom: 4px solid #01A469;
+  text-decoration: underline;
+  -webkit-text-decoration-color: #01A469;
+          text-decoration-color: #01A469;
   pointer: none;
+}
+
+.list-news {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 /*# sourceMappingURL=style.css.map */

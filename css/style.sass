@@ -118,12 +118,12 @@ ul
 .sc-vk:hover
   background: #4A76A8
   box-shadow: 0 0 10px #4A76A8
-.sc-fb:hover
-  background: #0050fb
-  box-shadow: 0 0 10px #0051ff
+.sc-ok:hover
+  background: #fb4f00
+  box-shadow: 0 0 10px #fb4f00
 .sc-insta:hover
-  background: #F27F2A
-  box-shadow: 0 0 10px #F27F2A
+  background: linear-gradient(to left, #ff9249, #C23099)
+  box-shadow: 3px 3px 10px #ff9249, -3px -3px 10px #C23099
 
 
 //******************************************//
@@ -988,6 +988,9 @@ footer
       display: flex
       width: 25%
       font-family: "Montserrat", sans-serif
+      padding-right: 20px
+      +bp(900px)
+        display: none
 
     .list-menu
       display: flex
@@ -1009,7 +1012,9 @@ footer
 
     .right-side
       width: 70%
-      margin-top: 10px
+      +bp(900px)
+        width: 100%
+        padding-right: 20px
 
       &__title
         display: inline-block
@@ -1018,5 +1023,12 @@ footer
         font-size: 24px
         font-weight: bold
         margin: 0
-        border-bottom: 4px solid $selectColor
+        text-decoration: underline
+        text-decoration-color: $selectColor
         pointer: none
+
+// all-news
+
+.list-news
+  display: flex
+  flex-direction: column
